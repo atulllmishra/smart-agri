@@ -1,39 +1,69 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import { axios } from "axios";
+import axios from "axios";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+import { sign } from "jsonwebtoken";
 
 function page() {
   const router = useRouter();
-  const [buttonDisabled, setButtonDisabled] = React.useState(false);
-  
+  const [user, setUser] = React.useState({
+    userName: "",
+    email: "",
+    password: "",
+  });
 
-  const handleSubmit = () => {};
-  const handleInputChange = () => {};
-  const formData = () => {};
+  const [buttonDisabled, setButtonDisabled] = React.useState(false);
+   
+  useEffect(() => {
+    if(user.email.length > 0 && user.password.length > 0 && user.userName.length > 0){
+      setButtonDisabled(false);
+    } else {
+      setButtonDisabled(true);
+    }
+  }, [user]);
+
+  const [loading, setLoading] = React.useState(false);
+
+  const onSignUp = async (e) => {
+    e.preventDefault();
+    console.log("signup user", user);
+    try {
+      setLoading(true);
+      const response = await axios.post("/api/signup", user);
+      console.log("signup response", response.data);
+      router.push("/login");
+    } catch (error) {
+      console.log("signup error", error);      
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
-          Signup
+          {loading ? "Loading..." : "Sign Up"}
         </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={onSignUp} className="space-y-4">
           <div>
             <label
-              htmlFor="name"
+              htmlFor="userName"
               className="block text-sm font-medium text-gray-700"
             >
-              Name
+              User Name
             </label>
             <input
               type="text"
               name="name"
               id="name"
-              value={formData.name}
-              onChange={handleInputChange}
+              value={user.userName}
+              onChange={(e) => setUser({ ...user, userName: e.target.value })}
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
@@ -49,8 +79,8 @@ function page() {
               type="email"
               name="email"
               id="email"
-              value={formData.email}
-              onChange={handleInputChange}
+              value={user.email}
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
@@ -66,8 +96,8 @@ function page() {
               type="password"
               name="password"
               id="password"
-              value={formData.password}
-              onChange={handleInputChange}
+              value={user.password}
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />

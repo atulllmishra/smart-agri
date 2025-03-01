@@ -1,40 +1,52 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
-import { axios } from "axios";
+import axios from "axios";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 function page() {
+  const router = useRouter();
+  const [user, setUser] = React.useState({
+    email: "",
+    password: "",
+  });
+  const [buttonDisabled, setButtonDisabled] = React.useState(true);
 
-  const handleSubmit = () => {}
-  const handleInputChange = () => {}
-  const formData = () => {}
+  const [loading, setLoading] = React.useState(false);
+
+  const onLogin = async (e) => {
+    e.preventDefault();
+    try {
+      setLoading(true);
+      const response = await axios.post("/api/login", user);
+      console.log("login response", response.data);
+      toast.success("Login successful");
+      router.push("/profile");
+    } catch (error) {
+      console.log("login error", error);
+      toast.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (user.email.length > 0 && user.password.length > 0) {
+      setButtonDisabled(false);
+    } else {
+      setButtonDisabled(true);
+    }
+  }, [user]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
-          Login
+          {loading ? "Loading..." : "Login"}
         </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              value={formData.name}
-              onChange={handleInputChange}
-              required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
+        <form onSubmit={onLogin} className="space-y-4">
           <div>
             <label
               htmlFor="email"
@@ -46,8 +58,8 @@ function page() {
               type="email"
               name="email"
               id="email"
-              value={formData.email}
-              onChange={handleInputChange}
+              value={user.email}
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
@@ -63,8 +75,8 @@ function page() {
               type="password"
               name="password"
               id="password"
-              value={formData.password}
-              onChange={handleInputChange}
+              value={user.password}
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />

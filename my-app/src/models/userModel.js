@@ -3,13 +3,13 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   userName: { type: String, required: true, unique: true },
-  fullName: { type: String, required: true },
+  fullName: { type: String },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true }, // Hashed before saving
-  role: { type: String, enum: ["farmer", "buyer"], required: true },
+  role: { type: String, enum: ["farmer", "buyer"] },
   phone: { type: String },
-  location: { type: String, required: true },
-  pinCode: { type: Number, required: true },
+  location: { type: String },
+  pinCode: { type: Number },
   profileImage: { type: String, default: "" }, // Cloudinary or local storage
   isVerified: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now },
