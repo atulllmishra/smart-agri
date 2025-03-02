@@ -43,7 +43,7 @@ export default function Home() {
       </div>
 
       <section className="w-full bg-white flex flex-col">
-        <h1 className="text-3xl font-bold text-center py-5">Our Products</h1>
+        <h1 className="text-3xl font-bold text-center py-5">Products</h1>
         <div className="grid grid-rows-3 place-items-center gap-8">
           <div className="grid grid-cols-4 gap-5">
             <div className="flex flex-col border-2 border-slate-400  border-solid p-2">
