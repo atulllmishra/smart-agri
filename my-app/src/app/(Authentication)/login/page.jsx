@@ -85,13 +85,13 @@ function page() {
             type="submit"
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
           >
-            Sign Up
+            Login
           </button>
         </form>
         <p className="text-sm text-gray-600 mt-4 text-center">
           Don't have an account?{" "}
           <Link href="/signup" className="text-blue-500 hover:underline">
-            Signup
+            Sign Up
           </Link>
         </p>
       </div>
