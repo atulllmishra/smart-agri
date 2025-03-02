@@ -75,24 +75,30 @@ export default function Header() {
           </div>
         </div>
       </div>
-
-      <div className="w-full bg-green-700 flex place-content-center justify-center">
-        <div className="w-1/2 flex items-center place-content-center justify-around text-white py-3">
-          <h1 className="font-poppins">
-            <Link href="/">Home</Link>
-          </h1>
-          <h1 className="font-poppins">
-            <Link href="/services">Services</Link>
-          </h1>
-          <h1 className="font-poppins">
-            <Link href="/aboutus">About Us</Link>
-          </h1>
-          <h1 className="font-poppins">
-            <Link href="/">Contact Us</Link>
-          </h1>
-          <h1 className="font-poppins">
-            <Link href="/">Terms & Services</Link>
-          </h1>
+      <div className="bg-green-300 h-12 w-full text-wrap">
+        <div className="container flex items-center justify-between pl-4 pr-4 pt-2">
+          <div className="flex items-center">
+            <div className="flex items-center">
+              <h1 className="text-white font-bold">Smart Agri</h1>
+            </div>
+          </div>
+          <div className="flex items-center justify-around text-black ">
+            <div className="flex items-center pl-4 pr-4 ">
+              <h1 className=" font-bold"><a href="home.html">Home</a></h1>
+            </div>
+            <div className="flex items-center pl-4 pr-4">
+              <h1 className="font-bold"><Link href="/aboutus">About Us</Link></h1>
+            </div>
+            <div className="flex items-center pl-4 pr-4">
+              <h1 className="font-bold"><Link href="/contactus">Contact Us</Link></h1>
+            </div>
+            <div className="flex items-center pl-4 pr-4">
+              <h1 className="font-bold"><Link href="/services">Services</Link></h1>
+            </div>
+            <div className="flex items-center pl-4 pr-4">
+              <h1 className="font-bold"><Link href="/faq">FAQ</Link></h1>
+            </div>
+          </div>
         </div>
       </div>
     </div>
