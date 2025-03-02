@@ -44,7 +44,7 @@ function page() {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
-          {loading ? "Loading..." : "Login"}
+          {loading ? "Loading..." : "Do Login"}
         </h1>
         <form onSubmit={onLogin} className="space-y-4">
           <div>
