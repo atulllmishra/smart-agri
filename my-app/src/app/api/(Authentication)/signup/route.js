@@ -10,7 +10,7 @@ export async function POST(request) {
     .then(async () => {
       const reqBody = await request.json();
       console.log("reqBody", reqBody);
-      const { userName, email, password } = reqBody;
+      const { userName, email, password, role } = reqBody;
 
       // Check if user already exists
       const user = await User.findOne({ email });
@@ -30,6 +30,7 @@ export async function POST(request) {
         userName,
         email,
         password: hashedPassword,
+        role,
       });
 
       const savedUser = await newUser.save();

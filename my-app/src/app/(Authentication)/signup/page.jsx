@@ -13,6 +13,7 @@ function page() {
     userName: "",
     email: "",
     password: "",
+    role: "buyer",
   });
 
   const [buttonDisabled, setButtonDisabled] = React.useState(false);
@@ -101,6 +102,20 @@ function page() {
               required
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
+          </div>
+          {/* Role Selection Dropdown */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Select Role
+            </label>
+            <select
+              value={user.role}
+              onChange={(e) => setUser({ ...user, role: e.target.value })}
+              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="buyer">Buyer</option>
+              <option value="seller">Seller</option>
+            </select>
           </div>
           <button
             type="submit"

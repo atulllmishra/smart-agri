@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   fullName: { type: String },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true }, // Hashed before saving
-  role: { type: String, enum: ["farmer", "buyer"] },
+  role: { type: String, enum: ["seller", "buyer"], required: true },
   phone: { type: String },
   location: { type: String },
   pinCode: { type: Number },
