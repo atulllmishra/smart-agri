@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className='bg-slate-200 border-b-2 border-green-300 max-h-fit w-full text-wrap flex justify-between'>
+    <div className='bg-slate-500 border-b-2 border-green-300 max-h-fit w-full text-wrap flex justify-between'>
         <div className='container p-11 text-black font-serif font-semibold'>
             <h1 className='border-b-2 border-green-300'>
                 Get In Touch With Us
@@ -21,25 +21,11 @@ export default function Footer() {
             </p>
             <br />
             phone: +91
-            
+
             <br />
             Email: 
             <br />
-            <br />
-            sunday: 9:00am - 5:00pm
-            <br />
-            monday: 9:00am - 5:00pm
-            <br />  
-            tuesday: 9:00am - 5:00pm
-            <br />
-            wednesday: 9:00am - 5:00pm
-            <br />
-            thursday: 9:00am - 5:00pm
-            <br />
-            friday: 9:00am - 5:00pm
-            <br />
-            saturday: 9:00am - 5:00pm
-            <br />
+            
         </div>
         <div className='container  p-11 text-black font-serif font-semibold'>
                 <h1 className='border-b-2 border-green-300'>
@@ -55,7 +41,7 @@ export default function Footer() {
             </div>
         </div>
         <hr />
-        <p>&copy;2025 AnyaBazaar. All Rights Reserved</p>
+        
     </div>
   )
 }
