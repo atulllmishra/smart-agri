@@ -84,7 +84,7 @@ export default function Header() {
           </div>
           <div className="flex items-center justify-around text-black ">
             <div className="flex items-center pl-4 pr-4 ">
-              <h1 className=" font-bold"><a href="home.html">Home</a></h1>
+              <h1 className=" font-bold"><Link href="/">Home</Link></h1>
             </div>
             <div className="flex items-center pl-4 pr-4">
               <h1 className="font-bold"><Link href="/aboutus">About Us</Link></h1>
