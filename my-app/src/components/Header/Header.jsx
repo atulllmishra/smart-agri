@@ -16,7 +16,7 @@ export default function Header() {
     const checkAuthStatus = async () => {
       try {
         const res = await axios.get("/api/status"); // Make sure this API exists
-        
+
         setIsLoggedIn(res.data.isLoggedIn);
       } catch (error) {
         console.error("Error checking auth:", error);
@@ -61,7 +61,10 @@ export default function Header() {
                 <Link href="/profile" className="text-black font-bold">
                   Visit Profile
                 </Link>
-                <button onClick={handleLogout} className="text-red-600 font-bold">
+                <button
+                  onClick={handleLogout}
+                  className="text-red-600 font-bold"
+                >
                   Logout
                 </button>
               </div>
@@ -70,13 +73,20 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="w-full bg-green-600">
-        <div className="w-1/2 flex items-center justify-around text-white py-3">
-          {["Home", "Sell", "Buy", "Services", "About Us", "Terms & Services", "Contact", "FAQ"].map((item, index) => (
-            <h1 key={index} className="font-poppins">
-              <Link href="/">{item}</Link>
-            </h1>
-          ))}
+      <div className="w-full bg-green-600 flex place-content-center justify-center">
+        <div className="w-1/2 flex items-center place-content-center justify-around text-white py-3">
+          <h1 className="font-poppins">
+            <Link href="/">Home</Link>
+          </h1>
+          <h1 className="font-poppins">
+            <Link href="/services">Services</Link>
+          </h1>
+          <h1 className="font-poppins">
+            <Link href="/">About Us</Link>
+          </h1>
+          <h1 className="font-poppins">
+            <Link href="/">Home</Link>
+          </h1>
         </div>
       </div>
     </div>
