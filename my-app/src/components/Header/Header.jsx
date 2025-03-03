@@ -75,14 +75,9 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="bg-green-300 h-12 w-full text-wrap">
-        <div className="container flex items-center justify-between pl-4 pr-4 pt-2">
-          <div className="flex items-center">
-            <div className="flex items-center">
-              <h1 className="text-white font-bold">Smart Agri</h1>
-            </div>
-          </div>
-          <div className="flex items-center justify-around text-black ">
+      <div className="bg-green-700 w-full flex place-content-center justify-center items-center text-wrap">
+        <div className="container w-1/2 place-content-center flex items-center justify-center p-2">
+          <div className="flex items-center justify-around text-white">
             <div className="flex items-center pl-4 pr-4 ">
               <h1 className=" font-bold"><Link href="/">Home</Link></h1>
             </div>
@@ -97,6 +92,9 @@ export default function Header() {
             </div>
             <div className="flex items-center pl-4 pr-4">
               <h1 className="font-bold"><Link href="/faq">FAQ</Link></h1>
+            </div>
+            <div className="flex items-center pl-4 pr-4">
+              <h1 className="font-bold"><Link href="/faq">Terms & Conditions</Link></h1>
             </div>
           </div>
         </div>
