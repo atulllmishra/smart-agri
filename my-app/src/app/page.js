@@ -113,7 +113,7 @@ export default function Home() {
             ))
           ) : (
             <p className="text-center col-span-4 text-gray-500">
-              No products available
+              Loading Products...
             </p>
           )}
         </div>
@@ -177,7 +177,7 @@ export default function Home() {
               width={120}
               height={120}
             />
-            <h3 className="font-bold mt-2 text-lg">Agricultural Marketplace</h3>
+            <h3 className="font-bold mt-2 text-black text-lg">Agricultural Marketplace</h3>
             <p className="text-center text-xs font-semibold text-gray-500">
               Buy and sell agricultural products directly from farmers and
               retailers. No middlemen, no hidden costs.
