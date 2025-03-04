@@ -5,7 +5,7 @@ export default function page() {
   return (
     <div className="w-full bg-slate-100 py-10 px-40">
       <div className="flex flex-col text-center">
-        <h3 className="font-bold text-2xl">About Us</h3>
+        <h3 className="font-bold text-black text-2xl">About Us</h3>
         <p className="text-green-320 text-justify text-gray-500">
           Welcome to AnyaBazaar - Empowering Agriculture, Connecting Farmers,
           Suppliers, and Buyers At AnyaBazaar, we are at the forefront of
@@ -17,7 +17,7 @@ export default function page() {
         </p>
         <hr className="border-1 border-black my-5" />
         <div className="">
-          <h3 className="font-bold text-2xl">Our Mission</h3>
+          <h3 className="font-bold text-black text-2xl">Our Mission</h3>
           <p className="text-green-320 text-justify text-gray-500">
             To research and provide effective way on sustainable development of
             agricultural productivity, smart farming, and profit yielding
@@ -56,7 +56,7 @@ export default function page() {
         </div>
         <hr className="border-1 border-black my-5" />
         <div className="my-2">
-          <h3 className="font-bold text-2xl">Our Vision</h3>
+          <h3 className="font-bold text-black text-2xl">Our Vision</h3>
           <p className="text-green-320 text-justify text-gray-500">
             To create a sustainable and empowered agricultural ecosystem where
             farmers have direct access to markets, small businesses thrive, and
