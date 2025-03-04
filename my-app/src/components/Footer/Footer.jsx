@@ -45,10 +45,6 @@ export default function Footer() {
           <h1>
             <Link href="/services">Services</Link>
           </h1>
-          |
-          <h1>
-            <Link href="/faq">FAQ</Link>
-          </h1>
         </div>
       </div>
       <div className="bg-gray-950 p-2 text-sm text-white text-center">Copyright &copy; 2025 AnnyaBazar. All rights rserved | Designed & Developed by <b>Soft Sculptures</b></div>

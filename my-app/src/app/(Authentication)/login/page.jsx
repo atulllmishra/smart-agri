@@ -58,10 +58,11 @@ function page() {
               type="email"
               name="email"
               id="email"
+              placeholder="example@gmail.com"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full text-black p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <div>
@@ -78,7 +79,7 @@ function page() {
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full text-black p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <button

@@ -47,7 +47,7 @@ export default function Home() {
             Your Ultimate Agricultural Products Trading Platform !!
           </p>
           <p className="text-white ">
-            At FasalMandi, we are committed to changing the way farmers,
+            At AnyaBazaar, we are committed to changing the way farmers,
             suppliers and buyers connect and do business in agriculture. Our
             platform allows small business owners to buy fresh produce directly
             from farmers and farmers to sell their produce directly to
@@ -62,7 +62,7 @@ export default function Home() {
       </div>
 
       <section className="w-full bg-white my-2 flex flex-col px-32">
-        <h1 className="text-3xl font-bold text-center py-5">Products</h1>
+        <h1 className="text-3xl font-bold text-center text-black py-5">Products</h1>
         <div className="grid grid-cols-4 gap-1 place-items-center">
           {products.length > 0 ? (
             products.map((product) => (
@@ -81,7 +81,7 @@ export default function Home() {
                 </div>
                 <div className="w-full flex flex-row justify-between my-2">
                   <div className="flex flex-col text-xs gap-1">
-                    <p className="font-bold">Product Name</p>
+                    <p className="font-bold text-black">Product Name</p>
                     <p className="font-bold text-gray-500">
                       Quantity Available
                     </p>
@@ -89,7 +89,7 @@ export default function Home() {
                     <p className="font-bold text-gray-500">Upload Time</p>
                   </div>
                   <div className="flex flex-col text-xs gap-1">
-                    <p className="font-bold">{product.productName}</p>
+                    <p className="font-bold text-black">{product.productName}</p>
                     <p className="font-bold text-gray-500">
                       {product.quantity} {product.unit || 'Kg'}
                     </p>

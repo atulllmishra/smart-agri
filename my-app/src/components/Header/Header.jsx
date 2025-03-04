@@ -91,9 +91,6 @@ export default function Header() {
               <h1 className="font-bold"><Link href="/services">Services</Link></h1>
             </div>
             <div className="flex items-center pl-4 pr-4">
-              <h1 className="font-bold"><Link href="/faq">FAQ</Link></h1>
-            </div>
-            <div className="flex items-center pl-4 pr-4">
               <h1 className="font-bold"><Link href="/faq">Terms & Conditions</Link></h1>
             </div>
           </div>

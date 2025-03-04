@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
+import backgroundImage from  "../../../../public/image1/Agriculture.jpg";
 
 export default function page() {
   const [crop, setCrop] = useState("");
@@ -29,7 +31,7 @@ export default function page() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 " >
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
           Search
@@ -66,7 +68,7 @@ export default function page() {
               value={state}
               onChange={(e) => setState(e.target.value)}
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block text-black w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <button
