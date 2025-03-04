@@ -30,7 +30,7 @@ export default function Home() {
   });
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative bg-white">
       <div className="w-full">
         <Image
           src={search}
@@ -129,7 +129,7 @@ export default function Home() {
               width={120}
               height={120}
             />
-            <h3 className="font-bold mt-2 text-lg">Agricultural Marketplace</h3>
+            <h3 className="font-bold text-black mt-2 text-lg">Agricultural Marketplace</h3>
             <p className="text-center text-xs font-semibold text-gray-500">
               Buy and sell agricultural products directly from farmers and
               retailers. No middlemen, no hidden costs.
@@ -145,7 +145,7 @@ export default function Home() {
               width={120}
               height={120}
             />
-            <h3 className="font-bold mt-2 text-lg">Price Forecasting</h3>
+            <h3 className="font-bold text-black mt-2 text-lg">Price Forecasting</h3>
             <p className="text-center text-xs font-semibold text-gray-500">
               Buy and sell agricultural products directly from farmers and
               retailers. No middlemen, no hidden costs.
@@ -161,12 +161,12 @@ export default function Home() {
               width={120}
               height={120}
             />
-            <h3 className="font-bold mt-2 text-lg">Agricultural Marketplace</h3>
+            <h3 className="font-bold mt-2 text-black text-lg">Agricultural Marketplace</h3>
             <p className="text-center text-xs font-semibold text-gray-500">
               Buy and sell agricultural products directly from farmers and
               retailers. No middlemen, no hidden costs.
             </p>
-            <button className="bg-green-700 mt-4 text-white font-semibold px-3 py-1 my-1 rounded-sm">
+            <button className="bg-green-700 mt-4  text-white font-semibold px-3 py-1 my-1 rounded-sm">
               Explore
             </button>
           </div>
