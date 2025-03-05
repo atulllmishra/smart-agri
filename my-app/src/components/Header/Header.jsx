@@ -71,7 +71,11 @@ export default function Header() {
                   Logout
                 </button>
               </div>
-            ) : null}
+            ) : <div className="flex gap-4">
+            <Link href="/login" className="text-black font-bold">
+              Login
+            </Link>
+          </div>}
           </div>
         </div>
       </div>

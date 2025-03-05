@@ -6,6 +6,8 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { sign } from "jsonwebtoken";
+import Image from "next/image";
+import bgPic from "../../../../public/image1/Agriculture.jpg"
 
 function page() {
   const router = useRouter();
@@ -46,7 +48,7 @@ function page() {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div style={{ backgroundImage: `url(${bgPic.src})`, backgroundSize: 'cover', backgroundPosition: 'center', width: '100vw', height: '100vh'}} className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
           {loading ? "Loading..." : "Sign Up"}

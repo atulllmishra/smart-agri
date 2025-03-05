@@ -3,8 +3,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import Image from "next/image";
 import backgroundImage from  "../../../../public/image1/Agriculture.jpg";
+import Image from "next/image";
+import bgPic from "../../../../public/image1/Agriculture.jpg";
 
 export default function page() {
   const [crop, setCrop] = useState("");
@@ -31,7 +32,14 @@ export default function page() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 " >
+    <div style={{
+            backgroundImage: `url(${bgPic.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            width: "100vw",
+            height: "100vh",
+          }}
+          className="min-h-screen flex items-center justify-center bg-gray-100 " >
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
           Search
@@ -84,11 +92,7 @@ export default function page() {
               <h2 className="text-lg font-semibold">{priceData.title}</h2>
               <p className="text-gray-700">{priceData.details}</p>
             </div>
-          ) : (
-            <p className="text-gray-500">
-              Enter crop and state to fetch price.
-            </p>
-          )}
+          ) : null}
         </div>
       </div>
     </div>

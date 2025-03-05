@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
+import bgPic from "../../../../public/image1/Agriculture.jpg";
 
 export default function page() {
   const [crop, setCrop] = useState("");
@@ -20,7 +22,7 @@ export default function page() {
       setPriceData(response.data);
 
       console.log("Crop Price Data:", response.data);
-      //   console.log(); 
+      //   console.log();
     } catch (error) {
       console.error("Error fetching crop price:", error);
       setError("Failed to fetch price. Please try again later.");
@@ -28,10 +30,19 @@ export default function page() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div
+      style={{
+        backgroundImage: `url(${bgPic.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        width: "100vw",
+        height: "100vh",
+      }}
+      className="min-h-screen flex flex-col items-center justify-center bg-gray-100"
+    >
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
-          Search
+          Price Predictor
         </h1>
         <form onSubmit={onClick} className="space-y-4">
           <div>
@@ -42,6 +53,7 @@ export default function page() {
               Crop
             </label>
             <input
+              placeholder="Use Pascal Convention"
               type="text"
               name="crop"
               id="crop"
@@ -58,7 +70,7 @@ export default function page() {
             Search
           </button>
         </form>
-        <div>
+        {/* <div>
           {priceData ? (
             <div>
               <h2 className="text-lg font-semibold">{priceData.crop_name}</h2>
@@ -66,11 +78,31 @@ export default function page() {
             </div>
           ) : (
             <p className="text-gray-500">
-              Enter crop and state to fetch price.
             </p>
           )}
-        </div>
+        </div> */}
+        <div className="overflow-x-auto  bg-white">
+        {priceData ? (
+          <table className="min-w-full border my-5 border-gray-300">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="border px-4 py-2 text-left">Crop Name</th>
+                <th className="border px-4 py-2 text-left">Predicted Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">{priceData.crop_name}</td>
+                <td className="border px-4 py-2">
+                  {priceData.predicted_price}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        ) : null}
       </div>
+      </div>
+      
     </div>
   );
 }
