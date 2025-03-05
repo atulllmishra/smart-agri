@@ -10,7 +10,7 @@ export const getDataFromToken = (request) => {
         }
 
         const data = jwt.verify(token, process.env.SECRET_KEY);
-        console.log("Decoded Token Data:", data);
+        // console.log("Decoded Token Data:", data);
         // return NextResponse.json({isLoggedIn: true, user: data});
         return data;
     } catch (error) {
