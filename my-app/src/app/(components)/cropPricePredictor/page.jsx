@@ -65,7 +65,7 @@ export default function page() {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
+            className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
           >
             Search
           </button>
@@ -79,6 +79,7 @@ export default function page() {
           ) : (
             <p className="text-gray-500">
             </p>
+            
           )}
         </div> */}
         <div className="overflow-x-auto  bg-white">

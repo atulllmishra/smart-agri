@@ -43,7 +43,11 @@ export default function Footer() {
           </h1>
           |
           <h1>
-            <Link href="/services">Services</Link>
+            <Link href="/cropPricePredictor">Price Predictor</Link>
+          </h1>
+          |
+          <h1>
+            <Link href="/cropPriceChecker">Price Checker</Link>
           </h1>
         </div>
       </div>
