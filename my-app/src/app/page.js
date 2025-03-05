@@ -161,8 +161,8 @@ export default function Home() {
               Price Forecasting
             </h3>
             <p className="text-center text-xs font-semibold text-gray-500">
-              Buy and sell agricultural products directly from farmers and
-              retailers. No middlemen, no hidden costs.
+            Empowering businesses with data-driven insights, our price forecasting solution anticipates market trends,
+            helping you make smarter.
             </p>
             <button className="bg-green-700 mt-4 text-white font-semibold px-3 py-1 my-1 rounded-sm">
               <Link href='/cropPricePredictor'>Explore</Link>
@@ -174,8 +174,8 @@ export default function Home() {
               Real Time Price Checker
             </h3>
             <p className="text-center text-xs font-semibold text-gray-500">
-              Buy and sell agricultural products directly from farmers and
-              retailers. No middlemen, no hidden costs.
+            Stay ahead with real-time price tracking, 
+            empowering you to make quick, informed decisions and secure the best deals instantly.
             </p>
             <button className="bg-green-700 mt-4  text-white font-semibold px-3 py-1 my-1 rounded-sm">
             <Link href='/cropPriceChecker'>Explore</Link>
@@ -187,8 +187,9 @@ export default function Home() {
               AI Powered Chatbot
             </h3>
             <p className="text-center text-xs font-semibold text-gray-500">
-              Buy and sell agricultural products directly from farmers and
-              retailers. No middlemen, no hidden costs.
+            Empowering farmers with AI-driven insights,
+             our chatbot provides real-time guidance, 
+             helping them make informed decisions for a thriving harvest.
             </p>
             <button className="bg-green-700 mt-4 text-white font-semibold px-3 py-1 my-1 rounded-sm">
               Explore
