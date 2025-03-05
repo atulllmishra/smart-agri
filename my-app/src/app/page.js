@@ -4,13 +4,17 @@ import search from "../../public/image1/agri.jpg";
 import deal from "../../public/icons/deal.png";
 import predictive from "../../public/icons/predictive.png";
 import rts from "../../public/icons/rts.png";
-import chatbot from "../../public/icons/chatbot.png"
+import chatbot from "../../public/icons/chatbot.png";
 import Link from "next/link";
+import Router from "next/navigation";
+import { useRouter } from "next/navigation";
 import React from "react";
 import axios from "axios";
 import productimage from "../../public/productimage/watermelon.webp";
 export default function Home() {
+  const router = useRouter();
   const [products, setProducts] = React.useState([]);
+
   React.useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -29,10 +33,14 @@ export default function Home() {
   // Ensure products is properly accessed
   console.log("Products:", products);
   console.log("image url", products.imageUrl);
-  
+
   products.forEach((product, index) => {
     console.log(`Product ${index + 1} Image:`, product.imageUrl);
   });
+
+  const handleBuyNow = (product) => {
+    router.push(`/buyNow?productId=${product._id}`); // Pass productId as query param
+  };
 
   return (
     <div className="w-full relative bg-white">
@@ -43,7 +51,10 @@ export default function Home() {
           className="w-full h-screen opacity-100"
         />
       </div>
-      <div id="productSection" className="absolute top-96 left-1/3 transform -translate-x-1/2 -translate-y-1/2 px-10 py-6 mx-12 bg-black opacity-85 rounded-sm">
+      <div
+        id="productSection"
+        className="absolute top-96 left-1/3 transform -translate-x-1/2 -translate-y-1/2 px-10 py-6 mx-12 bg-black opacity-85 rounded-sm"
+      >
         <div className="">
           <p className="text-2xl font-bold text-green-300">
             Welcome to Annyabazar
@@ -120,7 +131,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex justify-between">
-                  <button className="bg-yellow-300 shadow-lg font-semibold text-black text-xs px-3 py-1 my-1">
+                  <button
+                    // onClick={handleBuyNow(product)}
+                    className="bg-yellow-300 shadow-lg font-semibold text-black text-xs px-3 py-1 my-1"
+                  >
                     Buy Now
                   </button>
                   <div className="font-semibold text-black text-xs px-3 py-1 my-1">
@@ -152,7 +166,7 @@ export default function Home() {
               retailers. No middlemen, no hidden costs.
             </p>
             <button className="bg-green-700 mt-4 text-white font-semibold px-3 py-1 my-1 rounded-sm">
-            <Link href='#productSection'>Explore</Link>
+              <Link href="#productSection">Explore</Link>
             </button>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
@@ -161,11 +175,12 @@ export default function Home() {
               Price Forecasting
             </h3>
             <p className="text-center text-xs font-semibold text-gray-500">
-            Empowering businesses with data-driven insights, our price forecasting solution anticipates market trends,
-            helping you make smarter.
+              Empowering businesses with data-driven insights, our price
+              forecasting solution anticipates market trends, helping you make
+              smarter.
             </p>
             <button className="bg-green-700 mt-4 text-white font-semibold px-3 py-1 my-1 rounded-sm">
-              <Link href='/cropPricePredictor'>Explore</Link>
+              <Link href="/cropPricePredictor">Explore</Link>
             </button>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
@@ -174,11 +189,11 @@ export default function Home() {
               Real Time Price Checker
             </h3>
             <p className="text-center text-xs font-semibold text-gray-500">
-            Stay ahead with real-time price tracking, 
-            empowering you to make quick, informed decisions and secure the best deals instantly.
+              Stay ahead with real-time price tracking, empowering you to make
+              quick, informed decisions and secure the best deals instantly.
             </p>
             <button className="bg-green-700 mt-4  text-white font-semibold px-3 py-1 my-1 rounded-sm">
-            <Link href='/cropPriceChecker'>Explore</Link>
+              <Link href="/cropPriceChecker">Explore</Link>
             </button>
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
@@ -187,9 +202,9 @@ export default function Home() {
               AI Powered Chatbot
             </h3>
             <p className="text-center text-xs font-semibold text-gray-500">
-            Empowering farmers with AI-driven insights,
-             our chatbot provides real-time guidance, 
-             helping them make informed decisions for a thriving harvest.
+              Empowering farmers with AI-driven insights, our chatbot provides
+              real-time guidance, helping them make informed decisions for a
+              thriving harvest.
             </p>
             <button className="bg-green-700 mt-4 text-white font-semibold px-3 py-1 my-1 rounded-sm">
               Explore

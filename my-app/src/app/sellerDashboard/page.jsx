@@ -91,7 +91,7 @@ export default function page() {
                       <td className="border px-4 py-2">₹{product.price}</td>
                       <td className="border px-4 py-2">
                         <button
-                          onClick={() => deleteProduct(product._id)}
+                          // onClick={() => deleteProduct(product._id)}
                           className="bg-red-500 text-white px-3 py-1 rounded mr-2 hover:bg-red-600"
                         >
                           Delete

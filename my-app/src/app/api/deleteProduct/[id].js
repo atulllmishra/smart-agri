@@ -1,11 +1,12 @@
 import { dbConnect } from "@/db/dbConfig";
 import Product from "@/models/productModel";
+import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
-export async function DELETE(req, { params }) {
+export async function DELETE(req, res) {
   try {
     await dbConnect();
-    const { id } = params;
+    const { id } = req.query();
     console.log("Received ID:", id);
 
     // Validate ObjectId format
