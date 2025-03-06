@@ -4,6 +4,8 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import bgPic from "../../../public/image1/Agriculture.jpg"
 
 export default function page() {
   const router = useRouter();
@@ -55,7 +57,15 @@ export default function page() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div
+  style={{
+    backgroundImage: `url(${bgPic.src})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+  className="flex flex-col items-center justify-center bg-gray-100 p-5 min-h-screen w-full"
+>
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
           {loading ? "Loading..." : "Submit Product"}
@@ -205,10 +215,11 @@ export default function page() {
             </label>
             <select
               value={"product.category"}
+              aria-placeholder="choose"
               onChange={(e) => setProduct({ ...product, category: e.target.value })}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             >
-              <option className="text-black" value="">Select a category</option>
+              <option className="text-black" value="">{ product.category || 'Select a category'}</option>
               <option className="text-black" value="crop">Crop</option>
               <option className="text-black" value="fruit">Fruit</option>
               <option className="text-black" value="vegetable">Vegetable</option>
