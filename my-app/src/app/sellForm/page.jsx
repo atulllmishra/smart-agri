@@ -217,7 +217,7 @@ export default function page() {
               value={"product.category"}
               aria-placeholder="choose"
               onChange={(e) => setProduct({ ...product, category: e.target.value })}
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 text-black block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             >
               <option className="text-black" value="">{ product.category || 'Select a category'}</option>
               <option className="text-black" value="crop">Crop</option>
