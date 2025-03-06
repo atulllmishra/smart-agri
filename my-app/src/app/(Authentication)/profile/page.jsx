@@ -41,7 +41,7 @@ export default function page() {
     }
   };
   return (
-    <div className="w-full flex flex-col items-center justify-center text-center px-10 mt-10">
+    <div className="w-full flex flex-col items-center justify-center bg-white text-center px-10 py-10">
       <div className="container border border-black rounded-lg shadow-lg p-6 w-96 bg-white">
         {/* Profile Picture */}
         <div className="flex justify-center mb-4">

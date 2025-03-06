@@ -84,17 +84,17 @@ export default function page() {
         </div> */}
         <div className="overflow-x-auto  bg-white">
         {priceData ? (
-          <table className="min-w-full border my-5 border-gray-300">
+          <table className="min-w-full border my-5 border-green-600">
             <thead>
-              <tr className="bg-gray-200">
+              <tr className="bg-green-600">
                 <th className="border px-4 py-2 text-left">Crop Name</th>
-                <th className="border px-4 py-2 text-left">Predicted Price</th>
+                <th className="border  px-4 py-2 text-left">Predicted Price</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="border px-4 py-2">{priceData.crop_name}</td>
-                <td className="border px-4 py-2">
+                <td className="border text-black px-4 py-2">{priceData.crop_name}</td>
+                <td className="border text-black px-4 py-2">
                   {priceData.predicted_price}
                 </td>
               </tr>

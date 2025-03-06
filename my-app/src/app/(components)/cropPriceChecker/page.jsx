@@ -42,7 +42,7 @@ export default function page() {
           className="min-h-screen flex items-center justify-center bg-gray-100 " >
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
         <h1 className="text-2xl font-bold text-gray-800 text-center mb-4">
-          Search
+          Price Checker
         </h1>
         <form onSubmit={onClick} className="space-y-4">
           <div>
@@ -56,10 +56,11 @@ export default function page() {
               type="text"
               name="crop"
               id="crop"
+              placeholder="Enter Crop Name"
               value={crop}
               onChange={(e) => setCrop(e.target.value)}
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <div>
@@ -73,6 +74,7 @@ export default function page() {
               type="text"
               name="state"
               id="state"
+              placeholder="Enter State"
               value={state}
               onChange={(e) => setState(e.target.value)}
               required
@@ -89,7 +91,7 @@ export default function page() {
         <div>
           {priceData ? (
             <div>
-              <h2 className="text-lg font-semibold">{priceData.title}</h2>
+              <h2 className="text-lg text-black font-semibold">{priceData.title}</h2>
               <p className="text-gray-700">{priceData.details}</p>
             </div>
           ) : null}

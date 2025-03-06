@@ -3,7 +3,9 @@ import React from "react";
 
 export default function page() {
   return (
-    <div className="grid bg-gray-50 grid-cols-2 justify-around border-2 border-solid border-black my-20 mx-36">
+   
+    <div className="bg-white py-20">
+       <div className="grid bg-white grid-cols-2 justify-around border-2 border-solid border-black  mx-36">
       <div className="w-full  p-2">
         <iframe
           className="w-full h-full border-0 border-solid border-black"
@@ -13,26 +15,27 @@ export default function page() {
       </div>
       <div className="w-full  p-2">
         <h1 className="font-bold text-xl text-black mb-2">Contact Us: </h1>
-        <p>
+        <p className="text-black">
           <b>Phone:</b> 1234567890
         </p>
-          <p>
+          <p className="text-black">
             <b>Email:</b>{"  "}softsculpture@gmail.com
           </p>
-        <div className="flex gap-2">
+        <div className="flex gap-2 text-black">
           <p>
             <b>Address:</b> Mahamaya College of Agricultural Engineering And
             Technology, Akbarpur
             <br />
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 text-black">
           <p>Uttar Pradesh (224122)
           </p>
         </div>
         <br />
         <hr />
       </div>
+    </div>
     </div>
   );
 }
