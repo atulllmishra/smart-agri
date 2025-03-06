@@ -60,7 +60,7 @@ export default function page() {
               value={crop}
               onChange={(e) => setCrop(e.target.value)}
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full text-black p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           <button
