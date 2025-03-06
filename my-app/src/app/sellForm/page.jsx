@@ -77,7 +77,7 @@ export default function page() {
                 setProduct({ ...product, productName: e.target.value })
               }
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           {/* Price Input */}
@@ -97,7 +97,7 @@ export default function page() {
                 setProduct({ ...product, price: e.target.value })
               }
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block text-black w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           {/* Quantity Input */}
@@ -117,7 +117,7 @@ export default function page() {
                 setProduct({ ...product, quantity: e.target.value })
               }
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full text-black p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           {/* Image URL Input */}
@@ -136,7 +136,7 @@ export default function page() {
               onChange={(e) =>
                 setProduct({ ...product, imageUrl: e.target.value })
               }
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full text-black p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           {/* Farmer Input */}
@@ -157,7 +157,7 @@ export default function page() {
               //   setProduct({ ...product, farmer: farmer?.userName || "" })
               // }
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full text-black p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           {/* Location Input */}
@@ -177,7 +177,7 @@ export default function page() {
                 setProduct({ ...product, location: e.target.value })
               }
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           {/* Description Input */}
@@ -195,7 +195,7 @@ export default function page() {
               onChange={(e) =>
                 setProduct({ ...product, description: e.target.value })
               }
-              className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 block w-full p-2 border text-black border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
           {/* Category Selection Dropdown */}
@@ -208,17 +208,17 @@ export default function page() {
               onChange={(e) => setProduct({ ...product, category: e.target.value })}
               className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
             >
-              <option value="">Select a category</option>
-              <option value="crop">Crop</option>
-              <option value="fruit">Fruit</option>
-              <option value="vegetable">Vegetable</option>
-              <option value="grain">Grain</option>
-              <option value="seed">Seed</option>
+              <option className="text-black" value="">Select a category</option>
+              <option className="text-black" value="crop">Crop</option>
+              <option className="text-black" value="fruit">Fruit</option>
+              <option className="text-black" value="vegetable">Vegetable</option>
+              <option className="text-black" value="grain">Grain</option>
+              <option className="text-black" value="seed">Seed</option>
             </select>
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
+            className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-800 transition"
           >
             Submit
           </button>
