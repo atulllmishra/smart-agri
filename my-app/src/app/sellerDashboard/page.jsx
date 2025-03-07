@@ -80,7 +80,7 @@ export default function page() {
                       <td className="border text-black px-4 py-2">{product.category}</td>
                       <td className="border text-black px-4 py-2">{product.description}</td>
                       <td className="border text-black px-4 py-2">{product.location}</td>
-                      <td className="border text-black px-4 py-2">₹{product.quantity}</td>
+                      <td className="border text-black px-4 py-2">{product.quantity}</td>
                       <td className="border text-black px-4 py-2">₹{product.price}</td>
                       <td className="border text-black px-4 py-2">
                         <button
